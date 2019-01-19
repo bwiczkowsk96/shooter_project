@@ -8,10 +8,13 @@ public class Bullet : MonoBehaviour {
     public float damage;
     public float movSpeed;
 
+    public GameObject bulletSpawn;
+
 
 	// Use this for initialization
 	void Start () {
-		
+        bulletSpawn = GameObject.Find("Bullet Spawn");
+        this.transform.rotation = bulletSpawn.transform.rotation;
 	}
 	
 	// Update is called once per frame
