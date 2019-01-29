@@ -60,6 +60,18 @@
      <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
      <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
  <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
+ <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
@@ -70,6 +82,7 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> master
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -255,7 +268,11 @@
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity.Settings">
+<<<<<<< HEAD
+ <HintPath>D:/NEW_SHOOTER/shooter_project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+=======
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+>>>>>>> master
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
