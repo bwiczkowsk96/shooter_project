@@ -91,8 +91,6 @@
      <Compile Include="Assets\Scripts\Joybutton.cs" />
      <Compile Include="Assets\Scripts\PlayerControler.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Quest\Ontriger.cs" />
-     <Compile Include="Assets\Scripts\Quest\QuestScript.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\VirtualJoystick.cs" />
      <Compile Include="Assets\Virtual Joystick Pack\Examples\2D Example\Player2DExample.cs" />
@@ -107,20 +105,14 @@
      <None Include="Assets\Transport Helicopter\Info Transport Helicopter.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Prefabs\Car\Shaders\DiffuseReflectiveShader.shader" />
-<<<<<<< HEAD
-=======
      <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
->>>>>>> master
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Prefabs\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Prefabs\Car\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-<<<<<<< HEAD
-=======
      <None Include="Assets\PyroParticles\Readme.txt" />
->>>>>>> master
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
@@ -134,18 +126,6 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
- <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/NEW_SHOOTER/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-=======
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
@@ -156,7 +136,6 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
->>>>>>> master
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -336,11 +315,7 @@
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity.Settings">
-<<<<<<< HEAD
- <HintPath>D:/NEW_SHOOTER/shooter_project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
-=======
  <HintPath>C:/Users/Dawid/Documents/shooter_project/shooter_project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
->>>>>>> master
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
