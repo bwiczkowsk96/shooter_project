@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\AKM\Bullet.cs" />
      <Compile Include="Assets\AKM\Shooting.cs" />
+     <Compile Include="Assets\Low Poly Currency\Scripts\Coin.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Prefabs\Car\Scripts\BrakeLight.cs" />
@@ -91,6 +92,7 @@
      <Compile Include="Assets\Scripts\Joybutton.cs" />
      <Compile Include="Assets\Scripts\PlayerControler.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Quest\GetCoin.cs" />
      <Compile Include="Assets\Scripts\Quest\Ontriger.cs" />
      <Compile Include="Assets\Scripts\Quest\QuestScript.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
@@ -120,6 +122,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Prefabs\Car\CarGuidelines.txt" />
+     <None Include="Assets\Izzy\Document\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
