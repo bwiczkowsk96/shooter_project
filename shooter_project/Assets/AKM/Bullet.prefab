@@ -96,9 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4670d794cc3ca3c4cb3f39fa847c95b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aliveTime: 0.08
+  aliveTime: 30
   damage: 10
-  movSpeed: 10
+  movSpeed: 125
+  bulletSpawn: {fileID: 100000, guid: 084a19e5cb5520e46a4d4ac11b06443d, type: 3}
 --- !u!135 &135190164739598196
 SphereCollider:
   m_ObjectHideFlags: 1

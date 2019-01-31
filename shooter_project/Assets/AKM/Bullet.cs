@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour {
 
     public GameObject bulletSpawn;
 
+    private GameObject enemyTriggered;
 
 	// Use this for initialization
 	void Start () {
@@ -26,4 +27,13 @@ public class Bullet : MonoBehaviour {
 
         this.transform.Translate(Vector3.forward * Time.deltaTime * movSpeed);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+            enemyTriggered = other.gameObject;
+            enemyTriggered.GetComponent<Enemy>().health -= damage;
+        Destroy(this.gameObject);
+
+    }
 }
