@@ -13,7 +13,7 @@ public class QuestScript : MonoBehaviour
 
     public int wallet;
     public bool FoundCash = false;
-    public bool IsTheQuestEnded = false;
+    public bool IsTheFirstQuestEnded = false;
     public bool firstStepEnded = false;
     public bool secoundStepEnded = false;
     public bool thirdStepEnded = false;
@@ -23,6 +23,7 @@ public class QuestScript : MonoBehaviour
     public GameObject gold;
     public GameObject car;
     public GameObject car2;
+    public GameObject helicopter;
 
     public int numberOfDialog = 0;
 
@@ -32,6 +33,7 @@ public class QuestScript : MonoBehaviour
         "Przynieś do Izzy kasę spod auta na dzielinicy Łysego",
         "Idź do Łysego",
         "Wróć do łysego niebawem!",
+        "Udaj się za blokowisko i wsiądź do helikoptera",
     };
     private string[] dialog = {
         "[Łysy] Siemano, musisz mi pomóc?",
@@ -66,6 +68,20 @@ public class QuestScript : MonoBehaviour
         "[Łysy] Patrz, stoi fura ! Dzięki wielkie!",
         "[Ja] Zdajesz sobie sprawe, że za dzięki nikt dzieci nie wykarmil ?",
         "[Łysy] Dobra dobra masz tu trochę ale odezwij się nie długo będę miał dla Ciebie kilka propozycji!",
+    };
+
+    private string[] dialog5 =
+    {
+        "[Łysy] Cześć, dobrze że wróciłeś.",
+        "[Ja] Nie nawijaj makaronu na uszy tylko gadaj co dla mnie masz!",
+        "[Łysy] Dobra uspokój się.. dostaliśmy cynk, że na pustyni jest gościu który zna położenie skrzyni pełnej kasy.",
+        "[Łysy] Musiałbyś się tam udać i zawinać skrzynie. Bedzię z tego niezła kasa.",
+        "[Ja] Na pustyni ? Jakiej pustyni ? Jak się tam dostane ?",
+        "[Łysy] Z tego co wiem to Sahara. Uspokój się po co te nerwy.",
+        "[Łysy] Załatwiliśmy dla Ciebie helikopter. Zabierze Cię tam.",
+        "[Ja] Dobra, gadaj gdzie ten helikopter i lecę, nie ma czasu na zbędną gadkę.",
+        "[Łysy] Helikopter wyląduje za nie długo za tym blokiem. Leć i załatw to a nie pożałujesz !",
+        "[Ja] Mam nadzieje że nie pożałuje !!!",
     };
     
     // Use this for initialization
@@ -124,10 +140,20 @@ public class QuestScript : MonoBehaviour
             StartCoroutine(DisplayTimer());
             wallet += 100;
             Cash.text = "$" +  wallet.ToString();
-            collider.enabled = false;
+            
+            IsTheFirstQuestEnded = true;
         }
-      
-        
+
+        if(IsTheFirstQuestEnded && numberOfDialog == 4)
+        {
+            canvas.enabled = true;
+            dialog = dialog5;
+            StartCoroutine(DisplayTimer());
+            helicopter.transform.Translate(0, -15, 0);
+
+        }
+
+
 
     }
 
