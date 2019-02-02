@@ -17,6 +17,7 @@ public class QuestScript : MonoBehaviour
     public bool firstStepEnded = false;
     public bool secoundStepEnded = false;
     public bool thirdStepEnded = false;
+    public bool AlmostSecondQuest = false;
     public Canvas canvas;
 
     public BoxCollider collider;
@@ -34,6 +35,7 @@ public class QuestScript : MonoBehaviour
         "Idź do Łysego",
         "Wróć do łysego niebawem!",
         "Udaj się za blokowisko i wsiądź do helikoptera",
+        "GRATULACJE GRACZU !!!",
     };
     private string[] dialog = {
         "[Łysy] Siemano, musisz mi pomóc?",
@@ -83,7 +85,36 @@ public class QuestScript : MonoBehaviour
         "[Łysy] Helikopter wyląduje za nie długo za tym blokiem. Leć i załatw to a nie pożałujesz !",
         "[Ja] Mam nadzieje że nie pożałuje !!!",
     };
-    
+
+    private string[] dialog6 =
+   {
+        "[Łysy] Brawo ! Zdobyleś to dla mnie !",
+        "[Ja] Nie było łatwo",
+        "[Łysy] Wiem wiem dlatego chciałbym Ci pogratulować bo dostajesz ode mnie 10 tyś",
+        "[Łysy] A zarazem wygrywasz grę stworzoną przez: ",
+        "[Łysy] Paweł PABLO Pietrzyk ",
+        "[Łysy] Dawid W140 Bujnowski",
+        "[Łysy] Bartłomiej Wiczkowski",
+        "[Łysy] Kamil Suchy Jasiurkowski",
+        "[Łysy] Projekt edukacyjny WSH 2019",
+        "[Łysy] Jeszcze raz wielkie gratulacjie GRACZU !!!",
+    };
+    void Awake()
+    {
+        
+        if (PlayerPrefs.GetInt("secondQuest") == 1)
+        {
+            FoundCash = true;
+            IsTheFirstQuestEnded = true;
+            firstStepEnded = true;
+            secoundStepEnded = true;
+            thirdStepEnded = true;
+            AlmostSecondQuest = true ;
+            numberOfDialog = 5;
+            PlayerPrefs.SetInt("secondQuest", 0);
+
+}
+    }
     // Use this for initialization
     void Start()
     {
@@ -101,11 +132,11 @@ public class QuestScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(numberOfDialog == 1)
+        if (numberOfDialog == 1)
         {
             canvas.enabled = true;
             dialog = dialog2;
-            
+
             StartCoroutine(DisplayTimer());
             secoundStepEnded = true;
             gold.SetActive(true);
@@ -115,41 +146,53 @@ public class QuestScript : MonoBehaviour
             canvas.enabled = true;
             StartCoroutine(DisplayTimer());
             collider.enabled = false;
-            
+
         }
-        if(!thirdStepEnded && FoundCash && numberOfDialog == 2)
+        if (!thirdStepEnded && FoundCash && numberOfDialog == 2)
         {
             canvas.enabled = true;
             dialog = dialog3;
-           
+
             StartCoroutine(DisplayTimer());
             thirdStepEnded = true;
             Object.Destroy(car);
             car2.SetActive(true);
             collider.enabled = true;
             wallet += 100;
-            Cash.text = "$" + wallet.ToString();
+            PlayerPrefs.SetInt("wallet", wallet);
+            Cash.text = "$" + PlayerPrefs.GetInt("wallet");
 
 
         }
-        if(thirdStepEnded && numberOfDialog == 3)
+        if (thirdStepEnded && numberOfDialog == 3)
         {
             canvas.enabled = true;
             dialog = dialog4;
 
             StartCoroutine(DisplayTimer());
             wallet += 100;
-            Cash.text = "$" +  wallet.ToString();
-            
+            PlayerPrefs.SetInt("wallet", wallet);
+            Cash.text = "$" + PlayerPrefs.GetInt("wallet");
+
             IsTheFirstQuestEnded = true;
         }
 
-        if(IsTheFirstQuestEnded && numberOfDialog == 4)
+        if (IsTheFirstQuestEnded && numberOfDialog == 4)
         {
             canvas.enabled = true;
             dialog = dialog5;
             StartCoroutine(DisplayTimer());
             helicopter.transform.Translate(0, -15, 0);
+
+        }
+
+        if (IsTheFirstQuestEnded && AlmostSecondQuest && numberOfDialog == 5)
+        {
+            canvas.enabled = true;
+            dialog = dialog6;
+            StartCoroutine(DisplayTimer());
+            wallet += 10000;
+            PlayerPrefs.SetInt("wallet", wallet);
 
         }
 
@@ -160,12 +203,12 @@ public class QuestScript : MonoBehaviour
     public int numer = 0;
     IEnumerator DisplayTimer()
     {
-        
+
         numer = 0;
         while (numer != dialog.Length)
         {
             string word = dialog[numer];
-           
+
             for (int i = 0; i < word.Length; i++)
             {
                 text.text += word[i].ToString();
@@ -174,7 +217,7 @@ public class QuestScript : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
             text.text = "";
-            
+
             numer++;
         }
         yield return new WaitForSeconds(1f);

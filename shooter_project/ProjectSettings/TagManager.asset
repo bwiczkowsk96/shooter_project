@@ -7,6 +7,7 @@ TagManager:
   - Kam
   - Fire
   - Izzy
+  - Enemy
   layers:
   - Default
   - TransparentFX
